@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>シン・化学基礎シミュレーションなのだ！</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;900&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Three.js (CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Sidebar Navigation -->
+        <nav id="sidebar">
+            <div class="logo">
+                <span class="icon">🧪</span>
+                <h1>化学大冒険</h1>
+                <p class="subtitle">ボクと一緒にやれば怖くないのだ！</p>
+            </div>
+            <ul id="nav-links">
+                <li data-target="home" class="active">🏠 ホーム</li>
+                <li class="nav-header">第1章：原子の構成</li>
+                <li data-target="viewer3d">⚛️ 3D原子ビューワ</li>
+                <li data-target="isotope">⚖️ 同位体比較</li>
+                <li data-target="radiation">☢️ 放射線シミュレーション</li>
+                <li class="nav-header">第2章：電子配置とイオン</li>
+                <li data-target="bohr">🎯 電子配置（ボーアモデル）</li>
+                <li data-target="ion">⚡ イオン生成シミュレーション</li>
+                <li class="nav-header">第3章：原子の性質</li>
+                <li data-target="ionization">💪 イオン化エネルギー</li>
+                <li data-target="affinity">🧲 電子親和力</li>
+                <li data-target="electronegativity">⚔️ 電気陰性度バトル</li>
+                <li data-target="size">📏 原子の大きさ比較</li>
+                <li class="nav-header">第4章：周期表</li>
+                <li data-target="periodic">🧩 周期表ゲーム</li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main id="main-content">
+            <header>
+                <h2 id="view-title">ホームなのだ！</h2>
+            </header>
+            
+            <div id="view-container">
+                <!-- Views will be injected here by main.js -->
+            </div>
+            
+            <!-- Shared Character Speech Bubble -->
+            <div id="character-bubble" class="hidden">
+                <button id="mascot-close" title="カニを隠す">×</button>
+                <div class="bubble-text" id="mascot-text">ここになのだ！</div>
+                <div class="mascot-img">🦀</div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/viewer3d.js"></script>
+    <script src="js/bohr.js"></script>
+    <script src="js/energy.js"></script>
+    <script src="js/periodic.js"></script>
+    <script src="js/isotope.js"></script>
+    <script src="js/radiation.js"></script>
+    <script src="js/electronegativity.js"></script>
+    <script src="js/size.js"></script>
+</body>
+</html>
